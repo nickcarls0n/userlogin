@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "userlogin",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "D:\\Personal Work\\React Projects\\userlogin\\amplify\\backend\\api\\userlogin\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 7
+    }
+  }
+}
