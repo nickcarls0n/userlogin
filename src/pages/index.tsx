@@ -19,6 +19,8 @@ const LoginPage = () => {
         </p>
         <Button buttonText="Submit" />
 
+        <Link to="/loggedinpage">Loggedin Page</Link>
+
         {/* <Link to="/loggedinpage">Loggedin Page</Link>
         <Link to="/createnewuser">Create new user</Link>
         <Link to="/errorpage">Error page</Link> */}
