@@ -20,10 +20,12 @@ const Wrapper = styled.div`
 
 interface InputProps {
   type: string;
+  value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
 export const Input = (props: InputProps) => {
-  return <StyledInput type={props.type} />;
+  return <StyledInput type={props.type} value={props.value} />;
 };
 
 const StyledInput = styled.input`
@@ -40,10 +42,11 @@ const StyledInput = styled.input`
 
 interface ButtonProps {
   buttonText: string;
+  type?: "button" | "reset" | "submit";
 }
 
 export const Button = (props: ButtonProps) => {
-  return <StyledButton>{props.buttonText}</StyledButton>;
+  return <StyledButton type={props.type}>{props.buttonText}</StyledButton>;
 };
 
 const StyledButton = styled.button`
