@@ -29,9 +29,20 @@ const CreateNewUser = () => {
       name: name,
       password: password,
     };
-    axios.post(loginApi, requestBody, requestConfig).then((response) => {
-      setMessage("Success! Your username and pass word have been created");
-    });
+    axios
+      .post(loginApi, requestBody, requestConfig)
+      .then((response) => {
+        setMessage("Success! Your username and pass word have been created");
+      })
+      .catch((error) => {
+        if (error.response.status === 401) {
+          setMessage(error.response.data.message);
+        } else {
+          setMessage(
+            "Sorry... The backend server is unavailable, please try again later"
+          );
+        }
+      });
   };
 
   return (

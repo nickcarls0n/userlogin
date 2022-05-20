@@ -1,20 +1,25 @@
-import React from 'react';
-import './App.css';
-import LoginPage from './pages';
+import React from "react";
+import "./App.css";
+import LoginPage from "./pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LoggedinPage from './pages/LoggedinPage';
-import CreateNewUser from './pages/CreateNewUser';
-import ErrorPage from './pages/ErrorPage';
+import LoggedinPage from "./pages/LoggedinPage";
+import CreateNewUser from "./pages/CreateNewUser";
+import { getToken } from "./service/AuthServices";
 
 function App() {
   return (
     <Router>
-    <Routes>
-      <Route path="/" element={<LoginPage />} />
-      <Route path="/loggedinpage" element={<LoggedinPage />} />
-      <Route path="/createnewuser" element={<CreateNewUser />} />
-      <Route path="/errorpage" element={<ErrorPage />} />
-    </Routes>
+      <Routes>
+        <Route
+          path="/"
+          element={!getToken() ? <LoginPage /> : <LoggedinPage />}
+        />
+        <Route
+          path="/loggedinpage"
+          element={getToken() ? <LoginPage /> : <LoggedinPage />}
+        />
+        <Route path="/createnewuser" element={<CreateNewUser />} />
+      </Routes>
     </Router>
   );
 }

@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 import Amplify, { API, graphqlOperation } from "aws-amplify";
 import { createTodo } from "../graphql/mutations";
 import { listTodos } from "../graphql/queries";
-
+import { Input, Button, OpaqueContainer } from "../components/components";
+import { useNavigate } from "react-router-dom";
 import awsExports from "../aws-exports";
+import { resetUserSession } from "../service/AuthServices";
+
 Amplify.configure(awsExports);
 
 const initialState = { name: "", description: "" };
@@ -42,6 +45,13 @@ const LoggedinPage = () => {
       console.log("error creating todo:", err);
     }
   }
+
+  let navigate = useNavigate();
+
+  const logoutHandler = () => {
+    resetUserSession();
+    navigate("/");
+  };
   return (
     <>
       <div>
@@ -64,6 +74,7 @@ const LoggedinPage = () => {
             <p>{todo.description}</p>
           </div>
         ))}
+        <Button buttonText="Logout" onClick={logoutHandler} />
       </div>
     </>
   );
