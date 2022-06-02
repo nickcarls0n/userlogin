@@ -60,7 +60,7 @@ const LoginPage = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          {errorMessage && <p>{errorMessage}</p>}
+          {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
           <p>
             Don't have a user name or password yet?
             <br />
@@ -68,7 +68,7 @@ const LoginPage = () => {
           </p>
           <Button type="submit" buttonText="Submit" />
 
-          <Link to="/loggedinpage">Loggedin Page</Link>
+          {/* <Link to="/loggedinpage">Loggedin Page</Link> */}
 
           {/* <Link to="/loggedinpage">Loggedin Page</Link>
         <Link to="/createnewuser">Create new user</Link>
@@ -86,6 +86,10 @@ const LoginWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+const ErrorMessage = styled.p`
+  color: maroon;
 `;
 
 export default LoginPage;

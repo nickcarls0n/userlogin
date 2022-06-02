@@ -10,6 +10,8 @@ export const OpaqueContainer = (props: OpaqueContainerProps) => {
 };
 
 const Wrapper = styled.div`
+  max-width: 400px;
+  margin: 24px;
   padding: 40px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 12px;

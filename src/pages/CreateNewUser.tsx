@@ -76,7 +76,7 @@ const CreateNewUser = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
             <Button type="submit" buttonText="Sign Up" />
-            {message && <p>{message}</p>}
+            {message && <ErrorMessage>{message}</ErrorMessage>}
           </OpaqueContainer>
         </form>
       </NewUserWrapper>
@@ -91,6 +91,10 @@ const NewUserWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+const ErrorMessage = styled.p`
+  color: maroon;
 `;
 
 export default CreateNewUser;
