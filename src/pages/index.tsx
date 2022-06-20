@@ -66,13 +66,7 @@ const LoginPage = () => {
             <br />
             Click here to <Link to="/createnewuser">create new user.</Link>
           </p>
-          <Button type="submit" buttonText="Submit" />
-
-          {/* <Link to="/loggedinpage">Loggedin Page</Link> */}
-
-          {/* <Link to="/loggedinpage">Loggedin Page</Link>
-        <Link to="/createnewuser">Create new user</Link>
-        <Link to="/errorpage">Error page</Link> */}
+          <Button type="submit" buttonText="Login" />
         </OpaqueContainer>
       </form>
     </LoginWrapper>

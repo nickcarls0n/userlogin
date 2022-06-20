@@ -1,5 +1,7 @@
 # User Login Using AWS
 
+![User login screen shot](/public/images/userlogin-github.jpg?raw=true "User login screen shot")
+
 This is a straightforward user login that uses an AWS database to store a user's `name`, `email`, `username` and `password`.
 
 ## How I created this project
@@ -12,7 +14,7 @@ This is a straightforward user login that uses an AWS database to store a user's
 
 ## Why I built this project this way
 
-- Using Create React App is a quick way to get up and running, I have used React Router DOM on a number of other projects making it an easy choice for rendering pages.
+- Using Create React App is a quick way to get up and running. I have used React Router DOM on a number of other projects making it an easy choice for rendering pages.
 - I have been wanting to explore setting up cloud storage database. Creating a simple register / login system seemed like the best "real world" solution to build to get better understanding of cloud storage.
 - I went with AWS for the first cloud exploration project as it shows up as a requested skill.
 

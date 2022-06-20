@@ -75,7 +75,7 @@ const CreateNewUser = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <Button type="submit" buttonText="Sign Up" />
+            <Button type="submit" buttonText="Create User" />
             {message && <ErrorMessage>{message}</ErrorMessage>}
           </OpaqueContainer>
         </form>
